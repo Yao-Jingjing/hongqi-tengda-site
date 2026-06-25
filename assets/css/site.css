@@ -42,3 +42,6 @@
 .sidebar-copy-email{display:block;margin-top:10px;padding:0;border:0;background:transparent;color:#ffad61;font-size:12px;font-weight:700;text-align:left}
 .sidebar-copy-email:hover{text-decoration:underline}
 @media(max-width:600px){.contact-buttons .button{width:100%}.email-modal-actions .button{width:100%}.email-modal-panel{padding:29px 22px}.email-modal-panel h2{font-size:24px}}
+
+.order-note{margin:14px 0 0;color:#8793a3;font-size:12px;line-height:1.75}
+.sidebar-help a+ a{display:block;margin-top:8px}

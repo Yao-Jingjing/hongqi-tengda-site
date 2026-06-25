@@ -116,10 +116,10 @@
       <div class="modal-panel email-modal-panel">
         <button class="modal-close" type="button" data-close-modal aria-label="关闭">×</button>
         <span class="section-en">CONTACT BY EMAIL</span>
-        <h2 id="email-modal-title">联系官方邮箱</h2>
-        <p>部分浏览器未设置默认邮件应用时，邮件链接可能无法直接打开。您可以复制邮箱，或尝试打开系统默认邮件应用。</p>
+        <h2 id="email-modal-title">需求提交与订单查询</h2>
+        <p><span data-email-guidance>发布需求请写明服务项目、样品或模型信息、数量、交付时间及联系方式；查询订单请提供订单编号、项目名称和联系人。</span> 若浏览器未设置默认邮件应用，也可复制邮箱后使用常用邮箱发送。</p>
         <div class="email-address-box">
-          <span>官网邮箱</span>
+          <span>需求与订单受理邮箱</span>
           <strong data-email-address>${OFFICIAL_EMAIL}</strong>
         </div>
         <div class="email-subject-row" data-email-subject-row hidden>
@@ -127,10 +127,10 @@
           <strong data-email-subject></strong>
         </div>
         <div class="email-modal-actions">
-          <button class="button" type="button" data-open-email-app>打开默认邮箱</button>
-          <button class="button button-outline" type="button" data-copy-modal-email>复制官网邮箱</button>
+          <button class="button" type="button" data-open-email-app>打开邮箱</button>
+          <button class="button button-outline" type="button" data-copy-modal-email>复制受理邮箱</button>
         </div>
-        <small class="email-modal-tip">若“打开默认邮箱”没有反应，请点击“复制官网邮箱”，再使用您常用的邮箱发送邮件。</small>
+        <small class="email-modal-tip">若“打开邮箱”没有反应，请复制受理邮箱，并使用您常用的邮箱发送。</small>
       </div>`;
     document.body.appendChild(modal);
     return modal;
