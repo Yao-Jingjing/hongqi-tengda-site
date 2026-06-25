@@ -45,3 +45,24 @@
 
 .order-note{margin:14px 0 0;color:#8793a3;font-size:12px;line-height:1.75}
 .sidebar-help a+ a{display:block;margin-top:8px}
+
+
+/* WeChat-first consultation */
+.utility-inner button{padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.utility-inner button:hover{color:#fff}
+.contact-methods>.contact-wechat-row{width:100%;display:grid;grid-template-columns:72px 1fr;gap:15px;padding:13px 0;border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;cursor:pointer}
+.contact-methods>.contact-wechat-row:hover strong{color:var(--blue)}
+.sidebar-help button{display:block;width:100%;margin-top:8px;padding:0;border:0;background:transparent;color:#ffad61;text-align:left;font-size:12px;font-weight:700;cursor:pointer}
+.sidebar-help button:hover{color:#fff}
+.empty-state>.button{border:0}
+
+
+/* Simplified contact information */
+.contact-buttons-single{margin-top:24px}
+.footer-email-label{display:block;margin-top:14px;color:#80a9d6;font-size:13px}
+.footer-email{display:block;margin-top:5px;color:#d7e8f8;font-size:13px;word-break:break-all}
+
+
+/* Removed top utility bar */
+.site-header{top:0}
+html{scroll-padding-top:82px}
