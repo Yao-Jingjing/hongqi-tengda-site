@@ -149,15 +149,18 @@
     const item = state.items.find(entry => entry.id === id);
     if (!item) return;
     const title = displayName(item);
+    const useTechContact = ["计算模拟分析", "数据分析与科研绘图"].includes(item.board);
+    const consultLabel = useTechContact ? "联系计算模拟工程师" : "联系行政专员";
     els.modalContent.innerHTML = `<span class="modal-board">${escapeHtml(item.board)} · ${escapeHtml(item.id)}</span>
       <h2 id="modal-item-title">${escapeHtml(title)}</h2><p class="modal-category">${escapeHtml(item.category)}</p>
       <div class="modal-details">${escapeHtml(item.details || "请联系技术顾问确认具体规格与服务内容。")}</div>
       <div class="modal-info-grid"><div><span>参考报价</span><strong class="modal-price">¥${formatPrice(item.price)} / ${escapeHtml(item.unit || "项")}</strong></div><div><span>预计周期</span><strong>${escapeHtml(item.cycle || "沟通确认")}</strong></div><div><span>服务优先级</span><strong>${escapeHtml(item.priority || "常规")}</strong></div><div><span>项目编号</span><strong>${escapeHtml(item.id)}</strong></div></div>
-      <div class="modal-actions"><button class="button" type="button" id="wechat-item">微信询价</button><button class="button button-ghost" type="button" id="copy-item">复制项目信息</button></div><p class="copy-status" id="copy-status"></p>`;
+      <div class="modal-actions"><button class="button" type="button" id="wechat-item">${consultLabel}</button><button class="button button-ghost" type="button" id="copy-item">复制项目信息</button></div><p class="copy-status" id="copy-status"></p>`;
     els.modal.hidden = false; document.body.classList.add("modal-open"); els.modal.querySelector(".modal-close")?.focus();
     document.getElementById("wechat-item").addEventListener("click", () => {
       closeModal();
-      document.querySelector("[data-open-qr]")?.click();
+      const selector = useTechContact ? "[data-open-tech]" : "[data-open-admin]";
+      document.querySelector(selector)?.click();
     });
     document.getElementById("copy-item").addEventListener("click", async () => {
       const text = `项目编号：${item.id}\n业务板块：${item.board}\n项目名称：${title}\n规格/内容：${item.details}\n参考价格：¥${formatPrice(item.price)} / ${item.unit}\n预计周期：${item.cycle}`;

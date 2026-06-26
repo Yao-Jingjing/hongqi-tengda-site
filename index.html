@@ -30,7 +30,15 @@
         <a href="catalog.html">项目查询</a>
         <a href="#contact">联系我们</a>
       </nav>
-      <button class="nav-consult" type="button" data-open-qr><span>▣</span> 企业微信咨询</button>
+
+      <div class="nav-consult-group" aria-label="企业微信咨询入口">
+        <button class="nav-consult nav-consult-tech" type="button" data-open-tech title="计算模拟企业微信">
+          <span>Σ</span><b>计算模拟</b>
+        </button>
+        <button class="nav-consult nav-consult-admin" type="button" data-open-admin title="采购与分析测试企业微信">
+          <span>▣</span><b>采购·测试</b>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -215,14 +223,183 @@
             <div><span>官方邮箱</span><strong>drwang@hongqitengda.cn</strong></div>
             <div><span>地址</span><strong>上海市金山区卫昌路315号</strong></div>
           </div>
-          <div class="contact-buttons contact-buttons-single">
-            <button class="button" type="button" data-open-qr>企业微信咨询</button>
+          <div class="contact-buttons contact-buttons-dual">
+            <button class="button" type="button" data-open-tech>计算模拟咨询</button>
+            <button class="button button-outline" type="button" data-open-admin>采购与分析测试咨询</button>
           </div>
-          <p class="order-note">业务咨询请扫码添加企业微信；正式资料可发送至官方邮箱。</p>
+          <p class="order-note">计算模拟、数据与软件需求请联系计算模拟工程师；采购、材料表征、分析测试及合同发票事务请联系行政专员。</p>
         </div>
-        <div class="contact-qr-card reveal delay-1">
-          <div class="qr-card-title"><span>WECHAT WORK</span><strong>扫码添加企业微信</strong><small>备注“官网咨询 + 需求关键词”</small></div>
-          <img src="assets/images/wecom-card-v10.jpg" alt="红祺腾达企业微信二维码名片" loading="lazy">
+
+        <div class="contact-wechat-dual reveal delay-1">
+          <article class="contact-wechat-card tech">
+            <span>COMPUTATIONAL SERVICE</span>
+            <h3>计算模拟咨询</h3>
+            <p>DFT、MD、AIMD、数据分析及软件技术需求。</p>
+            <img src="assets/images/wecom-tech-qr-v18.jpg" alt="计算模拟工程师企业微信二维码" loading="lazy">
+            <button type="button" data-open-tech>查看企业微信名片</button>
+          </article>
+          <article class="contact-wechat-card admin">
+            <span>PROCUREMENT & TESTING</span>
+            <h3>采购与分析测试</h3>
+            <p>耗材采购、材料表征、检测、合同及发票事务。</p>
+            <img src="assets/images/wecom-admin-qr-v17.jpg" alt="行政专员企业微信二维码" loading="lazy">
+            <button type="button" data-open-admin>查看企业微信名片</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="message-form-section message-form-v16" id="message">
+      <div class="container">
+        <div class="message-form-title reveal">
+          <span class="section-en">SUBMIT A REQUEST</span>
+          <h2>提交科研服务需求</h2>
+          <p>填写基本信息后，系统会自动整理并复制需求内容，再打开企业微信二维码。</p>
+        </div>
+
+        <div class="message-form-shell reveal delay-1">
+          <div class="message-side-panel">
+            <img src="assets/images/contact-lab-v15.jpg" alt="科研人员在实验室开展研究工作" loading="lazy">
+            <div class="message-side-overlay"></div>
+            <div class="message-side-content">
+              <span>HONGQI TENGDA</span>
+              <h3>让需求沟通更直接</h3>
+              <p>无需注册账号，也不会在网页服务器保存您的信息。</p>
+
+              <div class="message-steps">
+                <div><b>01</b><span><strong>填写需求</strong><small>说明项目和技术要求</small></span></div>
+                <div><b>02</b><span><strong>自动复制</strong><small>生成结构化需求内容</small></span></div>
+                <div><b>03</b><span><strong>微信沟通</strong><small>按需求类型匹配对应顾问</small></span></div>
+              </div>
+            </div>
+          </div>
+
+          <form class="message-form message-form-card" id="wechat-message-form">
+            <div class="message-form-head">
+              <div>
+                <strong>需求信息</strong>
+                <small>带 * 为必填项</small>
+              </div>
+              <span>预计 1–2 分钟</span>
+            </div>
+
+            <div class="message-form-fields">
+              <label>
+                <span>姓名 <b>*</b></span>
+                <input name="name" type="text" maxlength="40" placeholder="请输入联系人姓名" required>
+              </label>
+
+              <label>
+                <span>单位 / 课题组</span>
+                <input name="organization" type="text" maxlength="80" placeholder="高校、研究所或公司名称">
+              </label>
+
+              <label>
+                <span>微信号 / 手机号 <b>*</b></span>
+                <input name="contact" type="text" maxlength="80" placeholder="用于需求确认和报价沟通" required>
+              </label>
+
+              <label>
+                <span>邮箱</span>
+                <input name="email" type="email" maxlength="100" placeholder="选填，用于接收正式资料">
+              </label>
+
+              <label>
+                <span>需求类型 <b>*</b></span>
+                <select name="category" required>
+                  <option value="">请选择需求类型</option>
+                  <option>计算模拟分析</option>
+                  <option>材料表征与检测</option>
+                  <option>实验耗材与仪器</option>
+                  <option>数据分析与科研绘图</option>
+                  <option>软件开发与 AI 工具</option>
+                  <option>高端测试·生物·环境</option>
+                  <option>其他定制需求</option>
+                </select>
+              </label>
+
+              <label>
+                <span>期望完成时间</span>
+                <input name="deadline" type="date">
+              </label>
+
+              <label class="message-field-wide">
+                <span>项目名称或关键词</span>
+                <input name="project" type="text" maxlength="120" placeholder="例如：DFT 反应路径、XPS 测试、科研数据建模">
+              </label>
+
+              <label class="message-field-wide">
+                <span>具体需求 <b>*</b></span>
+                <textarea name="message" rows="6" maxlength="1600" placeholder="建议说明研究目标、样品或模型信息、数量、技术要求、交付内容及时间要求。" required></textarea>
+              </label>
+            </div>
+
+            <label class="message-form-consent">
+              <input name="consent" type="checkbox" required>
+              <span>我同意平台为处理本次需求而使用上述联系方式，且所提交内容不涉及未经授权的敏感信息。</span>
+            </label>
+
+            <div class="message-form-actions">
+              <button class="message-submit" type="submit">复制需求并联系对应企业微信</button>
+              <button class="message-reset" type="reset">清空</button>
+            </div>
+
+            <p class="message-form-note">计算模拟、数据与软件需求将匹配计算模拟工程师；采购、表征测试及合同发票事务将匹配行政专员。网页不会保存您的留言内容。</p>
+            <div class="message-form-status" id="message-form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-support-section" id="careers">
+      <div class="container">
+        <div class="section-title-row reveal">
+          <div>
+            <span class="section-en">BUSINESS SUPPORT & CAREERS</span>
+            <h2>行政事务与加入我们</h2>
+          </div>
+          <p>采购、合同、发票及商务事务由行政专员对接；同时长期欢迎科研技术与数字化方向人才联系。</p>
+        </div>
+
+        <div class="company-support-grid">
+          <article class="support-card admin-card reveal">
+            <div class="support-card-copy">
+              <span class="support-card-tag">ADMINISTRATIVE SUPPORT</span>
+              <h3>采购与发票等事务</h3>
+              <p>采购询价、合同资料、付款信息、发票申请、物流及其他商务行政事项，请联系红祺腾达行政专员。</p>
+              <ul>
+                <li>采购、产品与供货咨询</li>
+                <li>合同、付款及开票资料</li>
+                <li>物流、发货与售后协调</li>
+              </ul>
+              <button class="button" type="button" data-open-admin>联系行政专员</button>
+            </div>
+            <div class="support-qr">
+              <img src="assets/images/wecom-admin-qr-v17.jpg" alt="行政专员企业微信二维码" loading="lazy">
+              <strong>行政专员 · 红祺腾达</strong>
+              <small>扫码添加企业微信</small>
+            </div>
+          </article>
+
+          <article class="support-card career-card reveal delay-1">
+            <span class="support-card-tag">JOIN US</span>
+            <h3>加入我们</h3>
+            <p>我们长期关注科研技术服务、计算模拟、材料表征、软件开发、AI 工具及商务运营方向的优秀人才与合作伙伴。</p>
+            <div class="career-tags">
+              <span>计算模拟工程师</span>
+              <span>材料表征项目顾问</span>
+              <span>数据与科研绘图</span>
+              <span>软件与 AI 开发</span>
+              <span>市场与商务合作</span>
+              <span>行政运营支持</span>
+            </div>
+            <div class="career-contact">
+              <span>简历及合作介绍请发送至官方邮箱</span>
+              <strong>drwang@hongqitengda.cn</strong>
+            </div>
+            <p class="career-note">岗位开放情况、合作方式及工作地点以实际沟通为准。</p>
+          </article>
         </div>
       </div>
     </section>
@@ -235,9 +412,21 @@
         <p>科研技术服务与数字化解决方案平台</p>
         <span>以专业技术服务，连接科研需求与工程落地。</span>
       </div>
-      <div><strong>服务导航</strong><a href="#services">服务分类</a><a href="catalog.html">项目查询</a><a href="#workflow">合作流程</a></div>
-      <div><strong>联系我们</strong><span class="footer-email-label">官方邮箱</span><span class="footer-email">drwang@hongqitengda.cn</span></div>
-      <div class="footer-qr"><strong>企业微信咨询</strong><img src="assets/images/wecom-qr-v10.jpg" alt="企业微信二维码" loading="lazy"><small>扫码添加技术顾问</small></div>
+      <div><strong>服务导航</strong><a href="#services">服务分类</a><a href="catalog.html">项目查询</a><a href="#workflow">合作流程</a><a href="#careers">加入我们</a></div>
+      <div><strong>联系我们</strong><button type="button" data-open-tech>计算模拟咨询</button><button type="button" data-open-admin>采购与分析测试</button><a href="#careers">加入我们</a><span class="footer-email-label">官方邮箱</span><span class="footer-email">drwang@hongqitengda.cn</span></div>
+      <div class="footer-wecom-dual">
+        <strong>企业微信咨询</strong>
+        <div class="footer-wecom-grid">
+          <button class="footer-wecom-item" type="button" data-open-tech>
+            <img src="assets/images/wecom-tech-qr-v18.jpg" alt="计算模拟企业微信二维码" loading="lazy">
+            <span>计算模拟</span>
+          </button>
+          <button class="footer-wecom-item" type="button" data-open-admin>
+            <img src="assets/images/wecom-admin-qr-v17.jpg" alt="采购与分析测试企业微信二维码" loading="lazy">
+            <span>采购·分析测试</span>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="container footer-bottom">
       <span>© <span data-year></span> 上海红祺腾达信息技术有限公司</span>
@@ -245,23 +434,90 @@
     </div>
   </footer>
 
-  <aside class="floating-service" aria-label="快捷联系">
-    <a href="catalog.html" title="项目查询"><span>⌕</span><small>查询</small></a>
-    <button type="button" data-open-qr title="企业微信"><span>▣</span><small>微信</small></button>
-    <button type="button" data-open-qr title="发布需求"><span>＋</span><small>需求</small></button><button type="button" data-open-qr title="项目进度咨询"><span>◷</span><small>进度</small></button>
-    <a href="#top" title="返回顶部"><span>↑</span><small>顶部</small></a>
-  </aside>
-
-  <div class="modal" id="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-title" hidden>
+  <div class="modal" id="tech-qr-modal" role="dialog" aria-modal="true" aria-labelledby="tech-qr-title" hidden>
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-panel qr-modal-panel">
+    <div class="modal-panel qr-modal-panel dual-qr-modal-panel">
       <button class="modal-close" type="button" data-close-modal aria-label="关闭">×</button>
-      <span class="section-en">WECHAT WORK</span>
-      <h2 id="qr-title">企业微信咨询</h2>
-      <img src="assets/images/wecom-card-v10.jpg" alt="红祺腾达企业微信二维码">
-      <p>请使用微信扫码添加企业微信技术顾问，并备注“官网咨询 + 姓名/单位 + 需求关键词”。</p>
+      <span class="section-en">COMPUTATIONAL SERVICE</span>
+      <h2 id="tech-qr-title">联系计算模拟工程师</h2>
+      <img src="assets/images/wecom-tech-v18.jpg" alt="计算模拟工程师企业微信名片">
+      <p>适用于 DFT、MD、AIMD、数据分析、科研绘图及软件技术需求。添加时请备注“官网咨询 + 姓名/单位 + 需求关键词”。</p>
     </div>
   </div>
+
+  <div class="modal" id="admin-qr-modal" role="dialog" aria-modal="true" aria-labelledby="admin-qr-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel qr-modal-panel dual-qr-modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+      <span class="section-en">PROCUREMENT & TESTING</span>
+      <h2 id="admin-qr-title">联系企业微信行政专员</h2>
+      <img src="assets/images/wecom-admin-v17.jpg" alt="行政专员企业微信名片">
+      <p>适用于耗材采购、材料表征与检测、高端测试、合同、付款、发票、物流及售后事务。</p>
+    </div>
+  </div>
+
+<aside class="hq-chat" id="hq-chat" aria-label="红祺腾达自助客服">
+    <button class="hq-chat-launcher" type="button" aria-expanded="false" aria-controls="hq-chat-panel">
+      <span class="hq-chat-launcher-icon">✦</span>
+      <span class="hq-chat-launcher-text">
+        <strong>在线咨询</strong>
+        <small>常见问题 · 企业微信</small>
+      </span>
+    </button>
+
+    <section class="hq-chat-panel" id="hq-chat-panel" hidden>
+      <header class="hq-chat-header">
+        <div>
+          <span class="hq-chat-status"><i></i> 自助客服</span>
+          <strong>红祺腾达科研服务</strong>
+        </div>
+        <button class="hq-chat-close" type="button" aria-label="关闭在线咨询">×</button>
+      </header>
+
+      <div class="hq-chat-body" id="hq-chat-body">
+        <div class="hq-chat-message bot">
+          <div class="hq-chat-avatar">红</div>
+          <div class="hq-chat-bubble">
+            您好，欢迎咨询红祺腾达科研技术服务。请选择常见问题，或输入关键词查询。
+          </div>
+        </div>
+
+        <div class="hq-chat-quick" aria-label="常见问题">
+          <button type="button" data-faq-key="services">有哪些科研服务？</button>
+          <button type="button" data-faq-key="price">如何查询参考价格？</button>
+          <button type="button" data-faq-key="simulation">计算模拟如何报价？</button>
+          <button type="button" data-faq-key="testing">材料表征如何送样？</button>
+          <button type="button" data-faq-key="cycle">项目周期一般多久？</button>
+          <button type="button" data-faq-key="invoice">采购、合同与发票</button>
+          <button type="button" data-faq-key="progress">如何咨询项目进度？</button>
+          <button type="button" data-faq-key="careers">加入我们 / 招聘</button>
+          <button type="button" data-faq-key="techwechat">添加计算模拟企业微信</button>
+          <button type="button" data-faq-key="adminwechat">添加行政专员企业微信</button>
+        </div>
+
+        <div class="hq-chat-wecom hq-chat-wecom-dual" id="hq-chat-wecom" hidden>
+          <div class="hq-chat-contact-card" data-chat-contact="tech">
+            <img src="assets/images/wecom-tech-qr-v18.jpg" alt="计算模拟工程师企业微信二维码">
+            <strong>计算模拟工程师</strong>
+            <p>DFT / MD / AIMD / 数据与软件</p>
+            <button type="button" data-open-tech>查看名片</button>
+          </div>
+          <div class="hq-chat-contact-card" data-chat-contact="admin">
+            <img src="assets/images/wecom-admin-qr-v17.jpg" alt="行政专员企业微信二维码">
+            <strong>行政专员</strong>
+            <p>采购 / 表征测试 / 合同发票</p>
+            <button type="button" data-open-admin>查看名片</button>
+          </div>
+        </div>
+      </div>
+
+      <form class="hq-chat-input" id="hq-chat-form">
+        <label class="sr-only" for="hq-chat-text">输入咨询内容</label>
+        <input id="hq-chat-text" type="text" maxlength="120" placeholder="输入关键词，例如：DFT、送样、发票、招聘">
+        <button type="submit">发送</button>
+      </form>
+    </section>
+  </aside>
 
   <script src="assets/js/site.js" defer></script>
 </body>
